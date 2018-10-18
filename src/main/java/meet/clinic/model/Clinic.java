@@ -11,6 +11,8 @@ public class Clinic {
 
     String name;
 
+    String district;
+
     String city;
 
     String country;
