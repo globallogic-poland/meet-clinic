@@ -7,7 +7,7 @@ import lombok.Value;
 @Value
 public class Clinic {
 
-    String id;
+    String id; // TODO: possible change to UUID ?
 
     String name;
 
