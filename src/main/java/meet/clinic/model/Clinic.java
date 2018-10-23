@@ -1,20 +1,22 @@
 package meet.clinic.model;
 
-import lombok.Builder;
-import lombok.Value;
+import lombok.*;
+import org.springframework.data.cassandra.core.mapping.Column;
+import org.springframework.data.cassandra.core.mapping.PrimaryKey;
+import org.springframework.data.cassandra.core.mapping.Table;
 
 @Builder
-@Value
+@Getter
+@Setter
+@ToString
+@EqualsAndHashCode
+@Table
 public class Clinic {
 
-    String id; // TODO: possible change to UUID ?
+    @PrimaryKey
+    private ClinicKey key;
 
-    String name;
-
-    String district;
-
-    String city;
-
-    String country;
+    @Column
+    private String name;
 
 }
