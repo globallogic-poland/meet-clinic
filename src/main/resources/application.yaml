@@ -5,11 +5,11 @@ spring:
   cloud:
     stream:
       bindings:
-        patient-create-requests:
+        clinic-create-requests:
           destination: clinic-create-requests
-        patient-create-results:
+        clinic-create-results:
           destination: clinic-create-results
-        
+
   data:
     cassandra:
       port: 9042

@@ -18,8 +18,6 @@ public class ClinicController {
 
     @GetMapping(path = "/clinics", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
     public Flux<ClinicDto> getAll() {
-//        return Flux.interval(Duration.ofSeconds(1)) // TODO: another case for presentation
-//                .zipWith(clinicStorage.findAll(), (l, p) -> p)
         return clinicStorage.findAll()
                 .map(clinicTransformer::toDto);
     }
